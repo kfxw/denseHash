@@ -103,7 +103,7 @@ def DenseHash_RF_algo(bit, param, gpu_ind=0):
     TRAIN_LABEL = 'train_label.txt'
     TEST_LABEL = 'test_label.txt'
 
-    batch_size = 20
+    batch_size = 15
     epochs = 40
     learning_rate = 0.003
     weight_decay = 10 ** -5
@@ -127,7 +127,7 @@ def DenseHash_RF_algo(bit, param, gpu_ind=0):
     ### data processing
     transformations = transforms.Compose([
         transforms.Scale(256),
-        transforms.CenterCrop(224),
+        #transforms.CenterCrop(224),
         transforms.ToTensor(),
         transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
     ])
